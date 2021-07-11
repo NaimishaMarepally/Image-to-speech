@@ -37,7 +37,7 @@ def homepage():
             return redirect(request.url)
         if file:
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # img = Image.open('./ALLIMAGES/')
         pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
         img = Image.open(file)
