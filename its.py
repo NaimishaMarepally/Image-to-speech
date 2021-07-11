@@ -1,5 +1,5 @@
 # Importing the necessary Libraries
-from flask_cors import cross_origin
+from flask_Cors import cross_origin
 from flask import Flask, render_template, request
 from main import text_to_speech
 import os
