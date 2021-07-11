@@ -41,7 +41,7 @@ def homepage():
             filename = secure_filename(file.filename)
             #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # img = Image.open('./ALLIMAGES/')
-        print("Accesing Tesseract)
+        print("Accesing Tesseract")
         pytesseract.pytesseract.tesseract_cmd = '/app/vendor/tesseract-ocr/bin/tesseract'
         print("Accessed Tesseract")
         img = Image.open(file)
