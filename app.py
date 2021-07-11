@@ -55,5 +55,5 @@ def homepage():
 
 
 if _name_ == "_main_":
-    app.run(os.environ.get('PORT',8000), debug=True)
+    app.run(port=8000, debug=True)
     
