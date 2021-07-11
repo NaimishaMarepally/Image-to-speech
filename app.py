@@ -30,8 +30,8 @@ def homepage():
             flash('No file part')
             return redirect(request.url)
         file = request.files['file']
-        hocr = request.form.get('hocr') or ''
-        ext = '.hocr' if hocr else '.txt'
+        # hocr = request.form.get('hocr') or ''
+        # ext = '.hocr' if hocr else '.txt'
         # if user does not select file, browser also
         # submit a empty part without filename
         if file.filename == '':
