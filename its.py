@@ -1,5 +1,5 @@
 # Importing the necessary Libraries
-from flask_Cors import cross_origin
+from flask_cors import cross_origin
 from flask import Flask, render_template, request
 from main import text_to_speech
 import os
@@ -22,7 +22,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 print("Aedho File Line")
 @app.route('/', methods=['POST', 'GET'])
-@cross_origin()
+@cross_origin(app)
 def homepage():
     if request.method == 'POST':
         f = request.files['file']
