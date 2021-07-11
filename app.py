@@ -15,7 +15,7 @@ gender = 'Male'  # Voice assistant
 # import request
 
 
-UPLOAD_FOLDER = 'images'
+UPLOAD_FOLDER = '/images'
 ALLOWED_EXTENSIONS = set(['png','jpg', 'jpeg'])
 
 app = Flask(__name__)
