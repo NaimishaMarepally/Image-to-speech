@@ -18,7 +18,7 @@ gender = 'Male'  # Voice assistant
 UPLOAD_FOLDER = 'C:\\Users\\naimi\\Downloads\\Text-To-Speech-API-master\\Text-To-Speech-API-master\\images'
 ALLOWED_EXTENSIONS = set(['png','jpg', 'jpeg'])
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/', methods=['POST', 'GET'])
@@ -54,6 +54,5 @@ def homepage():
         return render_template('frontend.html')
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(port=8000, debug=True)
-    
