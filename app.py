@@ -41,7 +41,7 @@ def homepage():
             filename = secure_filename(file.filename)
             #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # img = Image.open('./ALLIMAGES/')
-        pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+        pytesseract.pytesseract.tesseract_cmd = '/.apt/usr/bin/tesseract'
         img = Image.open(file)
         result = pytesseract.image_to_string(img)
         with open('abc.text',mode='w') as file:
