@@ -5,7 +5,7 @@ from main import text_to_speech
 import os
 import pytesseract
 from PIL import Image
-
+from werkzeug.utils import secure_filename;
 
 # print(result)
 # text = result
