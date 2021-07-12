@@ -5,7 +5,7 @@ from main import text_to_speech
 import os
 import pytesseract
 from PIL import Image
-from werkzeug.utils import secure_filename
+from werkzeug.utils import CORS;
 
 # print(result)
 # text = result
@@ -42,7 +42,7 @@ def homepage():
             #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # img = Image.open('./ALLIMAGES/')
         print("Accesing Tesseract")
-        pytesseract.pytesseract.tesseract_cmd = '/app/vendor/tesseract-ocr/bin/tesseract'
+        pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
         print("Accessed Tesseract")
         img = Image.open(file)
 
