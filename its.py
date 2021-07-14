@@ -36,7 +36,7 @@ def homepage():
         # submit a empty part without filename
         if file.filename == '':
             flash('No selected file')
-            return redirect(request.url)
+            return render_template('frontend.html',output="No file selected.")
         if file:
             filename = secure_filename(file.filename)
             #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -53,7 +53,7 @@ def homepage():
             print(result)
         print("Selecting")
         text = result
-        print(text);
+        print(text)
         gender = request.form['voices']
         text_to_speech(text, gender)
         return render_template('frontend.html',output=result)
