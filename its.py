@@ -45,7 +45,7 @@ def homepage():
         print("Accessed Tesseract")
         img = Image.open(file)
 
-        print("Starting Result")
+        render_template('frontend.html',output="Started Result")
         result = pytesseract.image_to_string(img)
         with open('abc.text',mode='w') as file:
             file.write(result)
