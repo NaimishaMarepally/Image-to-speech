@@ -35,7 +35,6 @@ def homepage():
         # if user does not select file, browser also
         # submit a empty part without filename
         if file.filename == '':
-            flash('No selected file')
             return render_template('frontend.html',output="No file selected.")
         if file:
             filename = secure_filename(file.filename)
